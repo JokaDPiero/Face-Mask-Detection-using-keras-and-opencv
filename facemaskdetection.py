@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jan  8 21:35:45 2021
-
-@author: KIIT
-"""
-
 import cv2
 from keras.models import load_model
 import numpy as np
