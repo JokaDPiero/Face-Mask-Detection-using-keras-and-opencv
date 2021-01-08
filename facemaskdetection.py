@@ -50,9 +50,9 @@ while True:
         face_img = cv2.cvtColor(face_img, cv2.COLOR_BGR2RGB)
         #as the model is trained in images resesized to 224x224 px , we resize the frames
         face_img = cv2.resize(face_img, (224, 224))  
-        #converting to float32
+        #converting to float32 and making it 3-D
         face_img = img_to_array(face_img)
-        #as face_img is 2-D we increase its dimension to 3D to make it compatible with model
+        #as face_img is 3-D we increase its dimension to 4D(x,y,w,h) to make it compatible with model
         face_img = np.expand_dims(face_img, axis=0)
         #as the frames are batches of images i.e. captured continuously we normalise it
         face_img =  preprocess_input(face_img)
